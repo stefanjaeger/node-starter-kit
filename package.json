@@ -1,0 +1,32 @@
+{
+  "name": "sja-temp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.13.4",
+    "@reactivex/rxjs": "^5.0.0-beta.10"
+  },
+  "devDependencies": {
+    "babel-core": "^6.7.7",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.6.0",
+    "parallelshell": "^2.0.0",
+    "nodemon": "^1.9.2",
+    "css-loader": "^0.23.1",
+    "less": "^2.7.0",
+    "less-loader": "^2.2.3",
+    "raw-loader": "^0.5.1",
+    "style-loader": "^0.13.1",
+    "html-webpack-plugin": "^2.16.1",
+    "webpack": "^1.13.0",
+    "webpack-dev-server": "^1.14.1"
+    },
+  "scripts": {
+    "app": "webpack-dev-server --host 0.0.0.0 --progress --open --config webpack.config.js",
+    "backend": "nodemon backend/server.js",
+    "start": "parallelshell \"npm run backend\" \"npm run app\""
+  },
+  "author": "",
+  "license": "ISC"
+}
